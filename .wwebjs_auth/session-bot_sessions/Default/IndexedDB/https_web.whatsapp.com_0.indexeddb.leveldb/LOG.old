@@ -1,0 +1,18 @@
+2023/04/15-21:57:36.056 1980 Reusing MANIFEST C:\Users\User\OneDrive\Escritorio\ChatFINAL\base-wweb-memory\.wwebjs_auth\session-bot_sessions\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2023/04/15-21:57:36.057 1980 Recovering log #22
+2023/04/15-21:57:36.309 1980 Reusing old log C:\Users\User\OneDrive\Escritorio\ChatFINAL\base-wweb-memory\.wwebjs_auth\session-bot_sessions\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/000022.log 
+2023/04/15-21:58:01.161 7cc Level-0 table #28: started
+2023/04/15-21:58:01.212 7cc Level-0 table #28: 1043282 bytes OK
+2023/04/15-21:58:01.213 7cc Delete type=0 #22
+2023/04/15-21:58:01.602 1508 Compacting 1@0 + 2@1 files
+2023/04/15-21:58:02.074 1508 Generated table #29@0: 108796 keys, 2292078 bytes
+2023/04/15-21:58:02.285 1508 Generated table #30@0: 33566 keys, 2215295 bytes
+2023/04/15-21:58:02.340 1508 Generated table #31@0: 16456 keys, 367417 bytes
+2023/04/15-21:58:02.340 1508 Compacted 1@0 + 2@1 files => 4874790 bytes
+2023/04/15-21:58:02.341 1508 compacted to: files[ 0 3 1 0 0 0 0 ]
+2023/04/15-21:58:26.599 7cc Level-0 table #33: started
+2023/04/15-21:58:26.650 7cc Level-0 table #33: 1117624 bytes OK
+2023/04/15-21:58:26.651 7cc Delete type=2 #24
+2023/04/15-21:58:26.651 7cc Delete type=2 #25
+2023/04/15-21:58:26.651 7cc Delete type=0 #27
+2023/04/15-21:58:26.651 7cc Delete type=2 #28
