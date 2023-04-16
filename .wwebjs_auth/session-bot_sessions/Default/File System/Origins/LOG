@@ -1,3 +1,2 @@
-2023/04/15-22:00:43.979 624 Reusing MANIFEST C:\Users\User\OneDrive\Escritorio\ChatFINAL\base-wweb-memory\.wwebjs_auth\session-bot_sessions\Default\File System\Origins/MANIFEST-000001
-2023/04/15-22:00:43.979 624 Recovering log #3
-2023/04/15-22:00:43.980 624 Reusing old log C:\Users\User\OneDrive\Escritorio\ChatFINAL\base-wweb-memory\.wwebjs_auth\session-bot_sessions\Default\File System\Origins/000003.log 
+2023/04/15-22:16:50.811 22c8 Creating DB C:\Users\User\OneDrive\Escritorio\ChatFINAL\base-wweb-memory\.wwebjs_auth\session-bot_sessions\Default\File System\Origins since it was missing.
+2023/04/15-22:16:50.817 22c8 Reusing MANIFEST C:\Users\User\OneDrive\Escritorio\ChatFINAL\base-wweb-memory\.wwebjs_auth\session-bot_sessions\Default\File System\Origins/MANIFEST-000001

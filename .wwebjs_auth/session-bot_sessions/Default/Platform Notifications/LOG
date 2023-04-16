@@ -1,3 +1,2 @@
-2023/04/15-22:00:43.007 3770 Reusing MANIFEST C:\Users\User\OneDrive\Escritorio\ChatFINAL\base-wweb-memory\.wwebjs_auth\session-bot_sessions\Default\Platform Notifications/MANIFEST-000001
-2023/04/15-22:00:43.009 3770 Recovering log #3
-2023/04/15-22:00:43.010 3770 Reusing old log C:\Users\User\OneDrive\Escritorio\ChatFINAL\base-wweb-memory\.wwebjs_auth\session-bot_sessions\Default\Platform Notifications/000003.log 
+2023/04/15-22:17:15.299 2254 Creating DB C:\Users\User\OneDrive\Escritorio\ChatFINAL\base-wweb-memory\.wwebjs_auth\session-bot_sessions\Default\Platform Notifications since it was missing.
+2023/04/15-22:17:15.313 2254 Reusing MANIFEST C:\Users\User\OneDrive\Escritorio\ChatFINAL\base-wweb-memory\.wwebjs_auth\session-bot_sessions\Default\Platform Notifications/MANIFEST-000001
