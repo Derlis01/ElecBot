@@ -37,9 +37,16 @@ const consultarPadron = async (cedula) => {
     },
   };
 
-  const response = await axios(url, options);
-  const resultado = response.data;
-  return resultado;
+  try {
+    const response = await axios(url, options);
+    const resultado = response.data;
+    return resultado;
+  } catch (error) {
+    console.error("API Cayo", error);
+    throw new Error(
+      "Estamos haciendo un mantemiento a las busquedas, por favor intente nuevamente mas tarde ☺️"
+    );
+  }
 };
 
 const hola = async (cedula) => {
@@ -47,7 +54,10 @@ const hola = async (cedula) => {
     const resultado = await consultarPadron(cedula);
     return resultado.data;
   } catch (error) {
-    console.error("Error al ejecutar la función:", error);
+    console.error("Error al ejecutar la función hola", error);
+    throw new Error(
+      "No se pudo realizar la búsqueda, por favor, intente nuevamente más tarde"
+    );
   }
 };
 
@@ -78,9 +88,9 @@ const flowSecundario = addKeyword([
   "x",
   "y",
   "z",
-]).addAnswer(["Envia *Si* para iniciar el chatbot"]);
+]).addAnswer(["Envia *Si* para iniciar el ChatBot"]);
 
-let res;
+let res = null;
 
 const flowPrincipal = addKeyword(["si"])
   .addAnswer(
@@ -89,17 +99,38 @@ const flowPrincipal = addKeyword(["si"])
   .addAnswer(
     "👤 Introduce tu Número de Cédula:",
     { capture: true },
-    async (ctx, { flowDynamic }) => {
-      const res = await hola(ctx.body);
+    async (ctx, { flowDynamic, endFlow }) => {
+      const verifyNumber = async () => {
+        if (/^[0-9]+$/.test(ctx.body)) {
+          res = await hola(ctx.body);
+          return true;
+        } else {
+          flowDynamic(`❌ Debe ser un número`);
+          return endFlow("Escriba *Si* para una nueva busqueda 🔎");
+        }
+      };
 
-      if (res !== null) {
-        flowDynamic([
-          `🗳 𝗗𝗔𝗧𝗢𝗦 𝗗𝗘𝗟 𝗩𝗢𝗧𝗔𝗡𝗧𝗘：↓\n*Nombre*: ${res[0].apellido}\n*Apellido*: ${res[0].nombre}\n*Departamento*: ${res[0].departamento}\n*Distrito*: ${res[0].distrito}\n*Local*: ${res[0].local}\n*Mesa*: ${res[0].mesa}\n*Orden*: ${res[0].orden}`,
-        ]);
-      } else {
-        flowDynamic(
-          `❌ No encontramos coincidencia con el numero de documento: ${ctx.body}`
-        );
+      const SendData = async () => {
+        if (res !== null) {
+          console.log(res[0]);
+          flowDynamic([
+            `🗳 𝗗𝗔𝗧𝗢𝗦 𝗗𝗘𝗟 𝗩𝗢𝗧𝗔𝗡𝗧𝗘：↓\n*Nombre*: ${res[0].apellido}\n*Apellido*: ${res[0].nombre}\n*Departamento*: ${res[0].departamento}\n*Distrito*: ${res[0].distrito}\n*Local*: ${res[0].local}\n*Mesa*: ${res[0].mesa}\n*Orden*: ${res[0].orden}`,
+          ]);
+        } else {
+          flowDynamic(
+            `❌ No encontramos coincidencia con el numero de documento: ${ctx.body}`
+          );
+        }
+      };
+
+      if (await verifyNumber()) {
+        try {
+          await SendData();
+        } catch (error) {
+          flowDynamic(
+            "❌ Estamos haciendo un mantemiento a las busquedas, por favor intente nuevamente mas tarde ☺️"
+          );
+        }
       }
     }
   )
