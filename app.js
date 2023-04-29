@@ -88,7 +88,7 @@ const flowSecundario = addKeyword([
   "x",
   "y",
   "z",
-]).addAnswer(["Envia *Si* para iniciar el ChatBot"]);
+]).addAnswer(["Estamos con muchas solicitudes actualmente y no podemos procesar todas, pero si necesita saber dónde vota aquí puede consultar: https://padron.tsje.gov.py/ "]);
 
 let res = null;
 
