@@ -10,10 +10,10 @@ ElecBot fue una herramienta que permitía conocer la mesa de votación en la que
 El bot fue desarrollado utilizando Node.js y la librería de Chatbot ([Bot-Whatsapp](https://bot-whatsapp.netlify.app/)) para crear el bot de WhatsApp. Además, el bot se alojó en la plataforma Railway para su alojamiento en la nube.
 Para obtener los datos de las mesas de votación correspondientes a cada usuario, se utilizó una API que proporcionó los datos necesarios para el funcionamiento del bot.
 La interfaz del usuario se implementó mediante la plataforma de mensajería WhatsApp, lo que permitió que los usuarios pudieran interactuar con el bot a través de mensajes de texto.
-El bot Electoral fue una solución innovadora y accesible para todos, que permitió a los ciudadanos obtener la información necesaria sobre su mesa de votación de manera rápida y sencilla, lo que mejoró y agilizó la experiencia de votación en el proceso electoral.
+Para asegurarse de que el bot se pueda ejecutar en cualquier entorno sin problemas, se utilizó Docker.
+##### El bot Electoral fue una solución innovadora y accesible para todos, que permitió a los ciudadanos obtener la información necesaria sobre su mesa de votación de manera rápida y sencilla, lo que mejoró y agilizó la experiencia de votación en el proceso electoral.
 
-
-[![My Skills](https://skillicons.dev/icons?i=js,express,nodejs,git,vscode,github)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=js,express,nodejs,git,vscode,github,docker)](https://skillicons.dev)
 
 
 ### Características
